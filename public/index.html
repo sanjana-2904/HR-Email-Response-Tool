@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HR Email Response Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>HR Email Response Tool</h1>
+
+            <p class="subtitle">
+                Send professional email responses to job candidates
+            </p>
+
+            <form id="emailForm">
+
+                <!-- Candidate Name -->
+                <div class="form-group">
+
+                    <label for="candidateName">
+                        Candidate Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="candidateName"
+                        placeholder="Enter candidate name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Candidate Email -->
+                <div class="form-group">
+
+                    <label for="candidateEmail">
+                        Candidate Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="candidateEmail"
+                        placeholder="Enter candidate email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Position -->
+                <div class="form-group">
+
+                    <label for="position">
+                        Position Applied
+                    </label>
+
+                    <input
+                        type="text"
+                        id="position"
+                        placeholder="e.g. Full Stack Developer"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Candidate Status -->
+                <div class="form-group">
+
+                    <label>
+                        Candidate Status
+                    </label>
+
+                    <div class="status-options">
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="status"
+                                value="selected"
+                                required
+                            >
+
+                            Selected
+
+                        </label>
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="status"
+                                value="rejected"
+                            >
+
+                            Rejected
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Preview Button -->
+                <button
+                    type="button"
+                    id="previewBtn"
+                    class="preview-btn">
+
+                    Preview Email
+
+                </button>
+
+            </form>
+
+
+            <!-- Email Preview -->
+
+            <div
+                id="previewSection"
+                class="preview-section hidden">
+
+                <h2>Email Preview</h2>
+
+                <div class="preview-box">
+
+                    <p>
+                        <strong>To:</strong>
+                        <span id="previewEmail"></span>
+                    </p>
+
+                    <p>
+                        <strong>Subject:</strong>
+                        <span id="previewSubject"></span>
+                    </p>
+
+                    <hr>
+
+                    <pre id="previewContent"></pre>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="sendBtn"
+                    class="send-btn">
+
+                    Send Email
+
+                </button>
+
+            </div>
+
+
+            <!-- Success / Error Message -->
+
+            <div
+                id="message"
+                class="message">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
